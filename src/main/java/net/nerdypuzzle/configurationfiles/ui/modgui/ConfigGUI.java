@@ -33,6 +33,8 @@ import net.mcreator.ui.modgui.ModElementGUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.*;
 import java.util.List;
 
@@ -165,5 +167,10 @@ public class ConfigGUI extends ModElementGUI<Config> implements IBlocklyPanelHol
         config.config = this.blocklyPanel.getXML();
 
         return config;
+    }
+
+    @Override
+    public URI contextURL() throws URISyntaxException {
+        return null;
     }
 }
